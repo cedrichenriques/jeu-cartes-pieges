@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trap Cards - Game Rules</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f6ff;
+      color: #222;
+      margin: 0;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      background: linear-gradient(to right, #6c5ce7, #a29bfe);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #6c5ce7;
+      border-left: 5px solid #a29bfe;
+      padding-left: 10px;
+      margin-top: 30px;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .example {
+      background-color: #dfe6ff;
+      padding: 15px;
+      border-left: 5px solid #6c5ce7;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: right; margin-bottom: 20px;">
+    <a href="index.html" style="text-decoration: none; background-color: #6c5ce7; color: white; padding: 8px 12px; border-radius: 8px;">🇫🇷 Règles en Français</a>
+  </div>
+
+  <h1>Trap Cards – Game Rules</h1>
+
+  <h2>🌟 Goal of the Game</h2>
+  <p>Have the lowest score possible. If a player reaches <strong>exactly 100 points</strong>, their score resets to 50. If they exceed 100 points, they are eliminated. The last player remaining or the one with the lowest score wins the game.</p>
+
+  <h2>🃏 Card Values</h2>
+  <ul>
+    <li><strong>Red King</strong>: 0 points</li>
+    <li><strong>Black King</strong>: 13 points</li>
+    <li><strong>Queen</strong>: 12 points – when placed face-up, allows you to look at a hidden card</li>
+    <li><strong>Jack</strong>: 11 points – allows you to swap two cards (not with a player who called "Stop")</li>
+    <li><strong>Ace</strong>: 1 point</li>
+    <li><strong>2–10</strong>: face value</li>
+  </ul>
+
+  <h2>🛠️ Turn Overview</h2>
+  <ol>
+    <li>Draw a card (from the deck or discard pile) — <em>you may look at the card you draw</em></li>
+    <li>Swap it with one of your cards or place it face-up on the discard pile</li>
+    <li>Use a special power if it's a Queen or Jack</li>
+    <li>If any of your known cards match the visible discard card, you may discard it immediately</li>
+    <li>You may call "Stop" if you think you have the lowest score</li>
+  </ol>
+
+  <h2>✨ Powers</h2>
+  <ul>
+    <li><strong>Queen</strong>: lets you look at one of your hidden cards</li>
+    <li><strong>Jack</strong>: lets you swap two players’ cards (not involving someone who said "Stop")</li>
+  </ul>
+
+  <h2>🗣️ Saying "Stop"</h2>
+  <p>Other players each take one final turn. Then, if the player who said "Stop" has the lowest score:</p>
+  <ul>
+    <li>✅ Correct: <strong>-10 points</strong></li>
+    <li>❌ Wrong: <strong>+10 points</strong></li>
+  </ul>
+
+  <h2>⚡ Quick Discard</h2>
+  <p>Any player may discard one of their known cards instantly if it matches the card on top of the discard pile.</p>
+  <ul>
+    <li>If correct: the card is removed</li>
+    <li>If incorrect: draw one card <strong>without looking at it</strong></li>
+  </ul>
+
+  <h2>🔎 Discarding for Another Player</h2>
+  <p>If you have seen or memorized another player's card (via Queen, mistake, or swap), and they miss a chance to discard it, you can discard it for them.</p>
+  <ul>
+    <li>If correct: their card is discarded and they draw one</li>
+    <li>If wrong: you draw a card <strong>without looking at it</strong></li>
+  </ul>
+
+  <h2>📈 Scoring (End of Round)</h2>
+  <ul>
+    <li>Reveal your 4 cards</li>
+    <li>Add up the card values</li>
+    <li>Above 100: eliminated / Exactly 100: reset to 50</li>
+    <li>Apply "Stop" bonus/penalty</li>
+  </ul>
+  <div class="example">
+    <strong>Example (end of round 1):</strong><br>
+    Alice: 2, 7, Queen, Red King = 21 (called "Stop" and was right) → 11 points<br>
+    Bob: Jack, 3, 4, 5 = 23 points<br>
+    Carla: Black King, 2, 9, 4 = 28 points
+  </div>
+</body>
+</html>
