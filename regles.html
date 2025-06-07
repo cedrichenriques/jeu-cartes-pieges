@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartes Pièges - Règles du jeu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f6ff;
+      color: #222;
+      margin: 0;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      background: linear-gradient(to right, #6c5ce7, #a29bfe);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #6c5ce7;
+      border-left: 5px solid #a29bfe;
+      padding-left: 10px;
+      margin-top: 30px;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .example {
+      background-color: #dfe6ff;
+      padding: 15px;
+      border-left: 5px solid #6c5ce7;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cartes Pièges - Règles du jeu</h1>
+
+  <h2>🌟 But du jeu</h2>
+  <p>Faire le moins de points possible. Si un joueur atteint <strong>exactement 100 points</strong>, il redescend à 50. S'il dépasse 100 points, il est éliminé. Le dernier joueur restant ou celui ayant le plus petit score remporte la partie.</p>
+
+  <h2>🃏 Valeurs des cartes</h2>
+  <ul>
+    <li><strong>Roi rouge</strong> : 0 point</li>
+    <li><strong>Roi noir</strong> : 13 points</li>
+    <li><strong>Dame</strong> : 12 points - si jouée sur la pile visible, permet de voir une carte</li>
+    <li><strong>Valet</strong> : 11 points - permet d'échanger deux cartes (sauf avec un joueur ayant dit "Stop")</li>
+    <li><strong>As</strong> : 1 point</li>
+    <li><strong>2 à 10</strong> : valeur nominale</li>
+  </ul>
+
+  <h2>🛠️ Déroulement d'un tour</h2>
+  <ol>
+    <li>Piocher une carte (pioche cachée ou pile visible) — <em>vous pouvez regarder la carte que vous venez de piocher</em></li>
+    <li>Échanger avec une de ses cartes ou la poser sur la pile visible</li>
+    <li>Activer un pouvoir si c'est une Dame ou un Valet</li>
+    <li>Si une de vos cartes correspond à celle visible, vous pouvez la défausser</li>
+    <li>Dire "Stop" si vous pensez avoir le moins de points</li>
+  </ol>
+
+  <h2>✨ Pouvoirs</h2>
+  <ul>
+    <li><strong>Dame</strong> : voir une carte cachée</li>
+    <li><strong>Valet</strong> : échanger deux cartes entre joueurs (sauf avec un joueur ayant dit "Stop")</li>
+  </ul>
+
+  <h2>🗣️ Dire "Stop"</h2>
+  <p>Les autres joueurs jouent un dernier tour. Si le joueur qui a dit "Stop" a le plus petit score :</p>
+  <ul>
+    <li>✅ Il a raison : <strong>-10 points</strong></li>
+    <li>❌ Il a tort : <strong>+10 points</strong></li>
+  </ul>
+
+  <h2>⚡ Défausse à la volée</h2>
+  <p>Tout joueur peut immédiatement défausser une de ses cartes connues si la même valeur est visible.</p>
+  <ul>
+    <li>Bonne carte : elle est retirée</li>
+    <li>Mauvaise carte : vous piochez une carte <strong>sans la regarder</strong></li>
+  </ul>
+
+  <h2>🔎 Défausse par un autre joueur</h2>
+  <p>Un joueur qui a vu/mémorisé votre carte (Dame, erreur, échange) peut la défausser à votre place si vous n'agissez pas.</p>
+  <ul>
+    <li>S'il a raison : votre carte est retirée et vous piochez</li>
+    <li>S'il se trompe : il pioche une carte <strong>sans la regarder</strong></li>
+  </ul>
+
+  <h2>📈 Comptage des points (fin de manche)</h2>
+  <ul>
+    <li>Révéler ses 4 cartes</li>
+    <li>Additionner les valeurs</li>
+    <li>Plus de 100 : éliminé / Pile 100 : retour à 50</li>
+    <li>Appliquer bonus/malus du "Stop"</li>
+  </ul>
+  <div class="example">
+    <strong>Exemple (fin de 1ère manche) :</strong><br>
+    Alice : 2, 7, Dame, Roi rouge = 21 (a dit "Stop" et a eu raison) → 11 points<br>
+    Bob : Valet, 3, 4, 5 = 23 points<br>
+    Carla : Roi noir, 2, 9, 4 = 28 points
+  </div>
+</body>
+</html>
